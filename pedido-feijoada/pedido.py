@@ -19,7 +19,7 @@ class PedidoFeijoada:
     def run(self):
         kwargs = self.validar_pedido()
         self.escolha_tipo_feijoada(**kwargs)
-        self.informar_acapamento()
+        self.informar_acompanhamento()
         self.criar_pedido()
         # for pedidos in PedidoFeijoada.pedidos_concluidas:
         #     for key, value in pedidos.items():
@@ -75,7 +75,7 @@ class PedidoFeijoada:
             else:
                 self.lancar_erro("TIPO INVÁLIDO!")
 
-    def informar_acapamento(self):
+    def informar_acompanhamento(self):
         while True:
             acompanhamento = input(
                 "Informe o acompanhamento [F, L, C, B, 0 = não] "
